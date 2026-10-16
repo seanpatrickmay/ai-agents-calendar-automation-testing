@@ -8,7 +8,7 @@ python3 calendar/server.py
 ```
 Open http://127.0.0.1:8765 . In another terminal:
 ```sh
-python3 calendar/pi-calendar.py
+python3 studio/pi-studio.py
 ```
 See the [calendar README](calendar/README.md) for setup, API details and tests. Pi, Ollama and downloaded model weights are external installations; application data and local Pi configuration stay inside `calendar/` and are ignored by Git.
 

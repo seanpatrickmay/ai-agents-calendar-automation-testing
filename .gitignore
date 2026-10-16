@@ -8,8 +8,8 @@ __pycache__/
 output/
 auth.json
 models.json
-.calendar-pi/
 *.sqlite3*
 
 # Raw run evidence stays local until explicitly reviewed for publication.
 /evidence/local/
+.studio-pi/

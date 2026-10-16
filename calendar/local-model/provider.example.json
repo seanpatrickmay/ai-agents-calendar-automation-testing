@@ -6,8 +6,8 @@
       "apiKey": "ollama-local-placeholder",
       "models": [
         {
-          "id": "calendar-qwen3.5:4b",
-          "name": "Local calendar Qwen3.5 4B",
+          "id": "calendar-qwen3.5:27b",
+          "name": "Local calendar Qwen3.5 27B",
           "reasoning": true,
           "thinkingLevelMap": {
             "off": "none"
@@ -15,8 +15,8 @@
           "input": [
             "text"
           ],
-          "contextWindow": 8192,
-          "maxTokens": 1024,
+          "contextWindow": 32768,
+          "maxTokens": 4096,
           "cost": {
             "input": 0,
             "output": 0,

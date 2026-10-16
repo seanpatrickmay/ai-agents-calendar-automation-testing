@@ -1,0 +1,48 @@
+# Edit this file. The agent reads it but never changes it.
+
+timezone: America/New_York        # home timezone (IANA name)
+
+working_hours:
+  weekday: { start: "09:00", end: "22:00" }
+  weekend: { start: "10:00", end: "20:00" }
+
+# Times the agent must never schedule work into.
+protected:
+  - { days: [daily], start: "22:30", end: "08:00", label: "sleep" }
+  # - { days: [Fri], start: "18:00", end: "23:59", label: "off" }
+
+# How work blocks get placed.
+work_blocks:
+  max_block_minutes: 120          # split longer tasks into multiple blocks
+  min_block_minutes: 30
+  buffer_before_deadline_hours: 12  # finish this long before the due time
+  prefer: [weekend_morning, weekday_evening]
+  max_work_hours_per_day: 5
+
+calendars:
+  main: "Personal"                # classes, meetings, travel
+  deadlines: "Deadlines"          # point-in-time due markers
+  work_blocks: "Focus"            # agent-scheduled work time
+
+reminders:                        # minutes before
+  deadline: [1440, 120]           # 1 day, 2 hours
+  class: [15]
+  meeting: [30]
+  flight: [1440, 240]
+  work_block: [10]
+
+travel:
+  airport_arrival_domestic_min: 90
+  airport_arrival_international_min: 180
+  home_to_airport_min: 45         # adjust for your airport
+  post_arrival_buffer_min: 60
+
+# Things the agent may write WITHOUT asking. Keep this short.
+# Leave empty to approve everything manually (recommended while testing).
+auto_approve: []
+  # - "confirmed deadlines from a syllabus already approved once"
+
+email:
+  check_folders: [INBOX]
+  ignore_senders_matching: ["noreply@marketing", "newsletter"]
+  important_senders_matching: [".edu", "instructure.com"]   # Canvas

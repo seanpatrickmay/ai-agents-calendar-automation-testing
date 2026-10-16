@@ -1,11 +1,11 @@
 {
   "compaction": {
     "enabled": true,
-    "reserveTokens": 1024,
-    "keepRecentTokens": 2048
+    "reserveTokens": 4096,
+    "keepRecentTokens": 8192
   },
   "branchSummary": {
-    "reserveTokens": 1024
+    "reserveTokens": 4096
   },
   "defaultThinkingLevel": "off",
   "cacheWarming": {

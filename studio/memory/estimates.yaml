@@ -1,0 +1,64 @@
+# Duration estimates. The agent uses `current_min` and updates it from `log`.
+# Calibration rule: after 3+ logged actuals, current_min = median(actuals) * 1.15
+# (the 15% pad covers context switching). Until then use default_min.
+
+task_types:
+  reading_response:
+    description: "Read 1-2 research papers + write a short response"
+    default_min: 150          # ~60 min/paper + 30 min writing
+    per_paper_min: 60
+    current_min: 150
+    log: []                   # - { date: 2026-10-18, actual_min: 120, note: "1 paper, short" }
+
+  studio_summary:
+    description: "Post-class summary + reflection, deliverables vary"
+    default_min: 60
+    current_min: 60
+    log: []
+
+  presentation_slides:
+    description: "Build slides for a team presentation"
+    default_min: 360          # split across multiple blocks
+    current_min: 360
+    log: []
+
+  presentation_rehearsal:
+    default_min: 60
+    current_min: 60
+    log: []
+
+  test_case_curation:
+    description: "Curate and document project test cases"
+    default_min: 480
+    current_min: 480
+    log: []
+
+  project_report:
+    default_min: 900
+    current_min: 900
+    log: []
+
+  research_spotlight:
+    description: "Read spotlight papers + build presentation (presenter only)"
+    default_min: 600
+    current_min: 600
+    log: []
+
+  problem_set:
+    default_min: 300
+    current_min: 300
+    log: []
+
+  exam_prep:
+    default_min: 600
+    current_min: 600
+    log: []
+
+  scheduling_email:
+    description: "Email someone to set up a meeting"
+    default_min: 15
+    current_min: 15
+    log: []
+
+# Unknown task type? Use playbooks/estimate_duration.md, then add an entry here
+# with `source: guessed` so the user can correct it.

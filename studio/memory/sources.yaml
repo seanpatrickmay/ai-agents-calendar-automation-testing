@@ -1,0 +1,30 @@
+# Every source the agent has processed. Used to detect changes and avoid
+# re-proposing the same events.
+
+last_email_check: null        # ISO timestamp
+
+sources:
+  - id: agents-course-calendar
+    type: syllabus_web
+    course: AGENTS
+    location: https://peach-research-lab.github.io/agent-human-control/calendar/
+    watch: true               # re-fetch each session; page says "subject to changes"
+    related:
+      - https://peach-research-lab.github.io/agent-human-control/about/     # policies
+      - https://peach-research-lab.github.io/agent-human-control/readings/  # spotlight papers
+    content_hash: null        # sha256 of normalized text, set after first approval
+    last_processed: null
+    event_ids: []             # stable ids of events created from this source
+
+  # - id: <second-course>-syllabus
+  #   type: syllabus_pdf
+  #   location: user_files/syllabi/<file>.pdf
+  #   watch: false
+  #   content_hash:
+  #   last_processed:
+  #   event_ids: []
+
+  # - id: flight-<confirmation>
+  #   type: travel_ticket
+  #   location: user_files/travel/<file>.png
+  #   ...
