@@ -1,0 +1,36 @@
+{
+  "providers": {
+    "ollama-calendar": {
+      "baseUrl": "http://127.0.0.1:11434/v1",
+      "api": "openai-completions",
+      "apiKey": "ollama-local-placeholder",
+      "models": [
+        {
+          "id": "calendar-qwen3.5:4b",
+          "name": "Local calendar Qwen3.5 4B",
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "off": "none"
+          },
+          "input": [
+            "text"
+          ],
+          "contextWindow": 8192,
+          "maxTokens": 1024,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "compat": {
+            "supportsReasoningEffort": true,
+            "supportsDeveloperRole": false,
+            "supportsStore": false,
+            "maxTokensField": "max_tokens"
+          }
+        }
+      ]
+    }
+  }
+}

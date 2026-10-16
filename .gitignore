@@ -1,0 +1,12 @@
+data/
+.pi/
+.env*
+*.log
+*.jsonl
+__pycache__/
+*.pyc
+output/
+auth.json
+models.json
+.calendar-pi/
+*.sqlite3*
