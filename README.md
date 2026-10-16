@@ -18,3 +18,6 @@ See the [calendar README](calendar/README.md) for setup, API details and tests. 
 - `calendar/tests/`: application unit/integration tests, kept with the app.
 
 There is no assignment experiment dataset or student study evidence yet. See the evidence inventory for the distinction from the earlier standalone scaffold.
+
+## Interview-rescheduling scenario
+Fictional messages, reference clock and original events: [`test-context/interview-reschedule/`](test-context/interview-reschedule/). Human-only setup/checklist: [`evaluation/interview-reschedule/`](evaluation/interview-reschedule/). Separate calendar URL: http://127.0.0.1:8766 . No scenario task has been run automatically.

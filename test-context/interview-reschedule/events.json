@@ -1,0 +1,26 @@
+[
+  {
+    "id": "event-a",
+    "title": "Northstar Labs interview \u2014 Maya Chen",
+    "start": "2026-10-30T10:00:00-04:00",
+    "end": "2026-10-30T11:00:00-04:00",
+    "location": "Virtual room Platform-482",
+    "notes": "Platform Engineer, application PL-482. Bring your distributed-systems portfolio. Panel: Jordan and Sam."
+  },
+  {
+    "id": "event-b",
+    "title": "Northstar Labs interview \u2014 Maya Chen",
+    "start": "2026-11-03T10:00:00-05:00",
+    "end": "2026-11-03T11:00:00-05:00",
+    "location": "Virtual room Security-619",
+    "notes": "Security Engineer, application SE-619. Separate application. Panel: Alex."
+  },
+  {
+    "id": "event-c",
+    "title": "Northstar interview preparation \u2014 PL-482",
+    "start": "2026-10-29T16:00:00-04:00",
+    "end": "2026-10-29T16:45:00-04:00",
+    "location": "",
+    "notes": "Review portfolio and architecture examples."
+  }
+]
