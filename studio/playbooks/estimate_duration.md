@@ -19,7 +19,7 @@ Heuristics (starting points, not truths):
 - Work backward from `due − buffer_before_deadline_hours`.
 - Split into `max_block_minutes` chunks; space multi-block tasks over
   multiple days.
-- Only in free time inside `working_hours`, never in `protected`.
+- Only in free time inside `working_hours`.
 - Respect `max_work_hours_per_day` across *all* courses.
 - Prefer slots listed in `work_blocks.prefer`.
 - If there's no room, say so and show the crunch: "Week of Nov 9 needs 14 h
