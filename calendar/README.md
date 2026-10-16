@@ -55,16 +55,16 @@ Settings are isolated in ignored `.calendar-pi/`, copied once from local-model e
 - Six isolated HTTP/SQLite tests passed; JavaScript and extension syntax checks passed.
 - Chrome checks verified create, edit, reload persistence and month navigation. Browser automation disconnected at the delete confirmation, so UI deletion was not fully verified; API deletion passed.
 - One synthetic Pi + local Ollama integration smoke test completed in 43.39 seconds against a temporary database: create/get/update/list/delete/list, final database empty. The model omitted end once; validation rejected it and the model corrected the call. No model errors or thinking blocks; agent_settled reported not aborted.
-- This was an integration smoke test, not student failure-study evidence or reflection. Raw traces remain ignored under output/.
+- This was an integration smoke test, not student failure-study evidence or reflection. Raw traces now live in ignored ../evidence/local/integration-smoke/; see ../evidence/README.md.
 
 ## Folder layout
-Everything specific to this app lives under `calendar/`:
+Application code and runtime state live under `calendar/`; bot task inputs and experiment evidence are separate top-level folders:
 - `server.py`, `web/`: loopback HTTP server, CRUD API and browser UI.
 - `data/calendar.sqlite3`: persistent SQLite database (ignored).
 - `extensions/`, `pi-calendar.py`, `local-model/`: Pi tools, launcher and local-model configuration templates.
 - `.calendar-pi/`: project-local Pi configuration (ignored, preserved across launches).
 - `tests/`: isolated CRUD/persistence checks; run the documented test command from `calendar/`.
-- `output/`: local diagnostic logs and traces (ignored).
+- `output/`: local server diagnostic logs (ignored). Actual model-run traces belong in `../evidence/local/` (ignored).
 
 Server and launcher paths resolve relative to their files, so `python3 calendar/server.py` and `python3 calendar/pi-calendar.py` also work from the repository root. The default database remains inside this folder regardless of your working directory. An explicitly supplied relative `--db` path is relative to your working directory.
 
